@@ -1,0 +1,20 @@
+----------iaas-----------------------------------------------------------------------
+sudo yum install epel-release -y (웹서버 설치)
+sudo yum install nginx -y	     (웹서버 설치)
+sudo systemctl start nginx        (웹서버 구동)
+curl localhost                        (웹서버 구동)
+
+find / -name "index.html"
+sudo passwd root (루트암호)
+su root
+echo "This is MHKim Homepage" > /usr/share/nginx/html/index.html
+
+-----------------------------paas-------------------------------------
+echo  "This is MHKim Homepage" > index.html
+
+
+
+
+
+Get-Command -CommandType application | Where-Object{$_.Name -like "*.msc"}		/명령어찾기
+Get-ChildItem -Path C:\Windows\ -Filter *.jpg -recurse | Copy-Item -Destination c:\pics 	/파일 찾기
