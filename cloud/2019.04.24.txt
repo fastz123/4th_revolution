@@ -1,0 +1,32 @@
+proxy 속도빠르게하기위함 , 대신보냄, 난 숨겨줌 <->reverse proxy = NAT port forward
+        외부에 노출시키지않고 대신 전달자 역할을 한다. and 차단하는 역할(ip,대역).
+
+load balance
+redirection
+fowarder
+NAT
+
+cmdlet | Get-Member
+cmdlet | format_list(fl)
+get - help
+get - command
+
+where-object
+
+
+Get-Module -ListAvailable
+
+Connect-AzureRmAccount
+get-azureRMvm
+
+http://www.naver.com : URL
+       host<|> domain
+www.naver.com : fqdn(Fully Qualified Domain Name)
+
+dns 이름 설정 후 원격접속
+
+active directory
+권한을 주기위해
+(1) subscription
+(2) resource group
+(3) each resource
