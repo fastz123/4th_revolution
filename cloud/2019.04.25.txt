@@ -1,0 +1,46 @@
+Availability set
+
+dns name : mhkimvm1.eastus.cloudapp.azure.com / mhkimvm22.eastus.cloudapp.azure.com
+
+    1  cat /etc/*-realse
+    2  cat /etc/*-release
+    3  sudo yum install httpd -y
+    4  sudo systemctl start httpd
+    5  enable httpd
+    6  history
+    7  sudo systemctl enable httpd
+    8  curl localhost
+    9  cat /etc/*-release
+   10  sudo find / -name "index.html"
+   11  sudo find / -name "index"
+   12  cls
+   13  sudo systemctl stop httpd
+   14  sudo systenctl disable httpd
+   15  sudo systemctl disable httpd
+   16  sydo yum install epel-release -y
+   17  sydo yum install epel-release-y
+   18  sydo yum install epel-release -y
+   19  sudo yum install epel-release -y
+   20  sudo systemctl start nginx
+   21  sudo yum install nginx -y
+   22  sudo systemctl start nginx
+   23  sudo systemctl enable nginx
+   24  history
+        sudo passwd root > 비번설정
+        su root > 비번확인
+    1  echo "MHKim VM1" > /usr/share/nginx/html/index.html
+    2  curl localhost
+    3  cat /usr/share/nginx/html/index.html
+
+nslookup
+cache
+
+mhkimvm1.eastus.cloudapp.azure.com 
+
+powershell
+start-sleep -Second 10
+stop-conputer
+get-command invoke-*
+invoke
+invoke-item (실행)
+get-command *-item
