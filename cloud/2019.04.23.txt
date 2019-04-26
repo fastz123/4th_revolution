@@ -1,11 +1,11 @@
-----------iaas-----------------------------------------------------------------------
-sudo yum install epel-release -y (À¥¼­¹ö ¼³Ä¡)
-sudo yum install nginx -y	     (À¥¼­¹ö ¼³Ä¡)
-sudo systemctl start nginx        (À¥¼­¹ö ±¸µ¿)
-curl localhost                        (À¥¼­¹ö ±¸µ¿)
+ï»¿----------iaas-----------------------------------------------------------------------
+sudo yum install epel-release -y (ì›¹ì„œë²„ ì„¤ì¹˜)
+sudo yum install nginx -y	     (ì›¹ì„œë²„ ì„¤ì¹˜)
+sudo systemctl start nginx        (ì›¹ì„œë²„ êµ¬ë™)
+curl localhost                        (ì›¹ì„œë²„ êµ¬ë™)
 
 find / -name "index.html"
-sudo passwd root (·çÆ®¾ÏÈ£)
+sudo passwd root (ë£¨íŠ¸ì•”í˜¸)
 su root
 echo "This is MHKim Homepage" > /usr/share/nginx/html/index.html
 
@@ -16,5 +16,5 @@ echo  "This is MHKim Homepage" > index.html
 
 
 
-Get-Command -CommandType application | Where-Object{$_.Name -like "*.msc"}		/¸í·É¾îÃ£±â
-Get-ChildItem -Path C:\Windows\ -Filter *.jpg -recurse | Copy-Item -Destination c:\pics 	/ÆÄÀÏ Ã£±â
+Get-Command -CommandType application | Where-Object{$_.Name -like "*.msc"}		/ëª…ë ¹ì–´ì°¾ê¸°
+Get-ChildItem -Path C:\Windows\ -Filter *.jpg -recurse | Copy-Item -Destination c:\pics 	/íŒŒì¼ ì°¾ê¸°

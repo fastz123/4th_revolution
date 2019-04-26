@@ -1,5 +1,5 @@
-proxy ¼Óµµºü¸£°ÔÇÏ±âÀ§ÇÔ , ´ë½Åº¸³¿, ³­ ¼û°ÜÁÜ <->reverse proxy = NAT port forward
-        ¿ÜºÎ¿¡ ³ëÃâ½ÃÅ°Áö¾Ê°í ´ë½Å Àü´ŞÀÚ ¿ªÇÒÀ» ÇÑ´Ù. and Â÷´ÜÇÏ´Â ¿ªÇÒ(ip,´ë¿ª).
+ï»¿proxy ì†ë„ë¹ ë¥´ê²Œí•˜ê¸°ìœ„í•¨ , ëŒ€ì‹ ë³´ëƒ„, ë‚œ ìˆ¨ê²¨ì¤Œ <->reverse proxy = NAT port forward
+        ì™¸ë¶€ì— ë…¸ì¶œì‹œí‚¤ì§€ì•Šê³  ëŒ€ì‹  ì „ë‹¬ì ì—­í• ì„ í•œë‹¤. and ì°¨ë‹¨í•˜ëŠ” ì—­í• (ip,ëŒ€ì—­).
 
 load balance
 redirection
@@ -23,10 +23,10 @@ http://www.naver.com : URL
        host<|> domain
 www.naver.com : fqdn(Fully Qualified Domain Name)
 
-dns ÀÌ¸§ ¼³Á¤ ÈÄ ¿ø°İÁ¢¼Ó
+dns ì´ë¦„ ì„¤ì • í›„ ì›ê²©ì ‘ì†
 
 active directory
-±ÇÇÑÀ» ÁÖ±âÀ§ÇØ
+ê¶Œí•œì„ ì£¼ê¸°ìœ„í•´
 (1) subscription
 (2) resource group
 (3) each resource

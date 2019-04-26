@@ -1,0 +1,4 @@
+﻿도메인
+도메인가비아같은곳에서 도메인구입 >> dns zone으로 가져옴 >> 앱서비스에서 custom domain >> 유효성검사 >> 등록
+
+user1@fastz123outlook.onmicrosoft.com / Laqu3533

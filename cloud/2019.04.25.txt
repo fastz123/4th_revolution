@@ -1,4 +1,4 @@
-Availability set
+ï»¿Availability set
 
 dns name : mhkimvm1.eastus.cloudapp.azure.com / mhkimvm22.eastus.cloudapp.azure.com
 
@@ -26,8 +26,8 @@ dns name : mhkimvm1.eastus.cloudapp.azure.com / mhkimvm22.eastus.cloudapp.azure.
    22  sudo systemctl start nginx
    23  sudo systemctl enable nginx
    24  history
-        sudo passwd root > ºñ¹ø¼³Á¤
-        su root > ºñ¹øÈ®ÀÎ
+        sudo passwd root > ë¹„ë²ˆì„¤ì •
+        su root > ë¹„ë²ˆí™•ì¸
     1  echo "MHKim VM1" > /usr/share/nginx/html/index.html
     2  curl localhost
     3  cat /usr/share/nginx/html/index.html
@@ -39,8 +39,8 @@ mhkimvm1.eastus.cloudapp.azure.com
 
 powershell
 start-sleep -Second 10
-stop-conputer
+stop-computer
 get-command invoke-*
 invoke
-invoke-item (½ÇÇà)
+invoke-item (ì‹¤í–‰)
 get-command *-item
