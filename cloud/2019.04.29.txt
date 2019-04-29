@@ -1,0 +1,75 @@
+High availability				 	 / scaleability
+고가용성(항상이용가능)				 / 확장성
+clustering,load balancing,replication,back up,DR(재난복구)	 / 
+
+dbserver : mhkimdbserver.database.windows.net / adminuser
+
+------------------SQL-------------------
+--------------create------------------------
+create table tbl01(id int, name varchar(8));
+insert into tbl01 values(1,'MHKim');
+insert into tbl01 values(2,'EYSong'),(3,'Peace');
+---------------select---------------
+select * from tbl01;
+
+Docker
+
+web app
+container  	web service 를 할수있음. client 는 어떤배경을 통해서 제공받는지 관심 x
+VM		
+storage
+
+storage account(static website에서 index.html로 해놓으면 $Web(blob)이 만들어짐)  >>
+ 	https://mhkimdata.z13.web.core.windows.net/ > 그안에 index.html을 upload하면 링크에 뜸.
+
+container >> docker >> kubernetes(K8S)
+용기 	    부두노동자    조타수
+
+
+ctrl p / ctrl q로 나올 수 있음
+
+ 1  docker run -it ubuntu /bin/bash
+    2*
+    3  docker run -it debian /bin/bash
+    4  docker ps
+    5  docker run -d -p 80:80 nginx
+    6  docker ps
+
+    8  docker run -d -p 1433:1433 -e MYSQL_ROOT_PASSWORD=password mysql
+    9  
+   10  docker ps
+   11  docker exec -it 712d00 bash
+   12  history
+
+	
+
+    2  docker images
+    3  docker run --name myweb -d -p 8080:80 nginx >새로운 컨테이너 생성
+    4  curl localhost:8080			        > 연결
+    6  docker exec -it myweb /bin/sh		        > 실행
+	find / -name "index.html"
+    7  docker ps
+    8  docker stop myweb
+   10  docker images
+   11  docker commit myweb bigdatawww
+   15  docker info
+   16  du -sh /var/lib/docker
+   17  docker tag bigdatawww fastz123/bigdatawww
+   18  docker images
+   19  du -sh /var/lib/docker > 용량확인
+
+        docker tag bigdatawww fastz123/bigdatawww > 태그
+   20  docker login -u fastz123		      > login
+   21  docker push fastz123/bigdatawww	      > 업로드
+   22  docker rmi bigdatawww		      > 불필요한 image 삭제
+   23  docker rmi fastz123/bigdatawww:latest		"
+   24  docker images			      > 이미지 확인
+   25  docker ps
+   27  docker rm 712d00c7cd48 -f 		      > 돌아가고있는 ps 삭제
+   28  docker rm $(docker ps -aq) -f		      > 돌고있는 전체삭제
+   29  docker ps
+   30  history
+
+        docker run -d -p 80:80 fastz123/bigdatawww  > 업로드한파일 실행 확인하면 변환된것 확인가능
+
+docker run -d -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=p@ssw0rd1234' -p 1433:1433 mssql
