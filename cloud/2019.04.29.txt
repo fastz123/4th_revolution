@@ -1,6 +1,6 @@
-High availability				 	 / scaleability
-°í°¡¿ë¼º(Ç×»óÀÌ¿ë°¡´É)				 / È®Àå¼º
-clustering,load balancing,replication,back up,DR(Àç³­º¹±¸)	 / 
+ï»¿High availability				 	 / scaleability
+ê³ ê°€ìš©ì„±(í•­ìƒì´ìš©ê°€ëŠ¥)				 / í™•ì¥ì„±
+clustering,load balancing,replication,back up,DR(ì¬ë‚œë³µêµ¬)	 / 
 
 dbserver : mhkimdbserver.database.windows.net / adminuser
 
@@ -15,18 +15,18 @@ select * from tbl01;
 Docker
 
 web app
-container  	web service ¸¦ ÇÒ¼öÀÖÀ½. client ´Â ¾î¶²¹è°æÀ» ÅëÇØ¼­ Á¦°ø¹Ş´ÂÁö °ü½É x
+container  	web service ë¥¼ í• ìˆ˜ìˆìŒ. client ëŠ” ì–´ë–¤ë°°ê²½ì„ í†µí•´ì„œ ì œê³µë°›ëŠ”ì§€ ê´€ì‹¬ x
 VM		
 storage
-
-storage account(static website¿¡¼­ index.html·Î ÇØ³õÀ¸¸é $Web(blob)ÀÌ ¸¸µé¾îÁü)  >>
- 	https://mhkimdata.z13.web.core.windows.net/ > ±×¾È¿¡ index.htmlÀ» uploadÇÏ¸é ¸µÅ©¿¡ ¶ä.
-
+------------------------------------------------------------------------------------------------
+storage account(static websiteì—ì„œ index.htmlë¡œ í•´ë†“ìœ¼ë©´ $Web(blob)ì´ ë§Œë“¤ì–´ì§)  >>
+ 	https://mhkimdata.z13.web.core.windows.net/ > ê·¸ì•ˆì— index.htmlì„ uploadí•˜ë©´ ë§í¬ì— ëœ¸.
+------------------------------------------------------------------------------------------
 container >> docker >> kubernetes(K8S)
-¿ë±â 	    ºÎµÎ³ëµ¿ÀÚ    Á¶Å¸¼ö
+ìš©ê¸° 	    ë¶€ë‘ë…¸ë™ì    ì¡°íƒ€ìˆ˜
+-------------------------------------------------------------------------------------------------------
 
-
-ctrl p / ctrl q·Î ³ª¿Ã ¼ö ÀÖÀ½
+ctrl p / ctrl që¡œ ë‚˜ì˜¬ ìˆ˜ ìˆìŒ
 
  1  docker run -it ubuntu /bin/bash
     2*
@@ -44,9 +44,9 @@ ctrl p / ctrl q·Î ³ª¿Ã ¼ö ÀÖÀ½
 	
 
     2  docker images
-    3  docker run --name myweb -d -p 8080:80 nginx >»õ·Î¿î ÄÁÅ×ÀÌ³Ê »ı¼º
-    4  curl localhost:8080			        > ¿¬°á
-    6  docker exec -it myweb /bin/sh		        > ½ÇÇà
+    3  docker run --name myweb -d -p 8080:80 nginx >ìƒˆë¡œìš´ ì»¨í…Œì´ë„ˆ ìƒì„±
+    4  curl localhost:8080			        > ì—°ê²°
+    6  docker exec -it myweb /bin/sh		        > ì‹¤í–‰
 	find / -name "index.html"
     7  docker ps
     8  docker stop myweb
@@ -56,20 +56,20 @@ ctrl p / ctrl q·Î ³ª¿Ã ¼ö ÀÖÀ½
    16  du -sh /var/lib/docker
    17  docker tag bigdatawww fastz123/bigdatawww
    18  docker images
-   19  du -sh /var/lib/docker > ¿ë·®È®ÀÎ
+   19  du -sh /var/lib/docker > ìš©ëŸ‰í™•ì¸
 
-        docker tag bigdatawww fastz123/bigdatawww > ÅÂ±×
+        docker tag bigdatawww fastz123/bigdatawww > íƒœê·¸
    20  docker login -u fastz123		      > login
-   21  docker push fastz123/bigdatawww	      > ¾÷·Îµå
-   22  docker rmi bigdatawww		      > ºÒÇÊ¿äÇÑ image »èÁ¦
+   21  docker push fastz123/bigdatawww	      > ì—…ë¡œë“œ
+   22  docker rmi bigdatawww		      > ë¶ˆí•„ìš”í•œ image ì‚­ì œ
    23  docker rmi fastz123/bigdatawww:latest		"
-   24  docker images			      > ÀÌ¹ÌÁö È®ÀÎ
+   24  docker images			      > ì´ë¯¸ì§€ í™•ì¸
    25  docker ps
-   27  docker rm 712d00c7cd48 -f 		      > µ¹¾Æ°¡°íÀÖ´Â ps »èÁ¦
-   28  docker rm $(docker ps -aq) -f		      > µ¹°íÀÖ´Â ÀüÃ¼»èÁ¦
+   27  docker rm 712d00c7cd48 -f 		      > ëŒì•„ê°€ê³ ìˆëŠ” ps ì‚­ì œ
+   28  docker rm $(docker ps -aq) -f		      > ëŒê³ ìˆëŠ” ì „ì²´ì‚­ì œ
    29  docker ps
    30  history
 
-        docker run -d -p 80:80 fastz123/bigdatawww  > ¾÷·ÎµåÇÑÆÄÀÏ ½ÇÇà È®ÀÎÇÏ¸é º¯È¯µÈ°Í È®ÀÎ°¡´É
+        docker run -d -p 80:80 fastz123/bigdatawww  > ì—…ë¡œë“œí•œíŒŒì¼ ì‹¤í–‰ í™•ì¸í•˜ë©´ ë³€í™˜ëœê²ƒ í™•ì¸ê°€ëŠ¥
 
-docker run -d -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=p@ssw0rd1234' -p 1433:1433 mssql
+docker run -d -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=p@ssw0rd1234' -p 1433:1433 microoft~ssql
