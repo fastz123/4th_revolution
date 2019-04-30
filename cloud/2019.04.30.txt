@@ -1,0 +1,64 @@
+﻿docker -help
+
+ docker run -it ubuntu /bin/bash
+    2  docker run -it debian /bin/bash
+    3  docker ps
+    4  docker run -d -p 80:80 nginx
+    5  docker ps
+   11  docker exec -it 712d00 bash
+   12  history
+   13  ls
+   23  docker images
+
+   78  docker --help
+   79  docker image pull alpine
+   80  docker image ls
+   81  docker images
+   82  pipe more
+   83  docker network --help
+   84  docker network inspect --help
+   85  docker network inspect -f --help
+   86  docker network inspect -f
+   87  docker network inspect f
+   88  docker ps
+   89  docker container ls
+   90  docker run --name con1 -it centos
+   91  docker run --name con2 -it centos /bin/bash
+   92  docker run --name con3 -it centos /etc/hosts
+   93  docker run --name con3 -it centos cat /etc/hosts
+   94  docker run --name con4 -it centos cat /etc/hosts
+   95  docker run --name con5 -it centos ping 8.8.8.8 -c 3
+   96  docker ps
+   97  docker image ls
+   98  docker history centos
+-------------------------------------------------------
+네트워크의 브릿지를 구성함으로써 서로 통신이 안되게 함
+265  docker network ls
+  266  docker network create
+  267  docker network create -d bridge mynet
+  268  docker network ls
+  269  docker run -itd --name con1 alpine
+  270  docker run -itd --name con2 alpine
+  271  docker run -itd --name con3 --net mynet alpine
+  272  docker run -itd --name con4 --net mynet alpine
+
+--------------------------------------------------------
+Azure AD
+AD DS (SSO -> Single Sign On - 중앙 인증)
+
+--------------------------------------------------------
+-public cloud 기능
+-iaas,paas,saas,caas,codeaas,daas
+-azure AD(AD DS<SSO,Group Policy,3rd party 지원>)
+-SQL
+-Container,docker, image
+-storage account
+-Azure file sync
+-web app
+-docker
+-
+--------------------------------------------------------
+power shell
+$profile
+help get-childitem
+get-alias
