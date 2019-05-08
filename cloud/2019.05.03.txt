@@ -1,0 +1,46 @@
+﻿app service 생성
+코딩한 파일 VS에서 프로파일등록후 업로드
+
+deployment slot에서 add후 swap - 홈페이지 변경할때 사용
+
+
+---------------------------------------
+deploymane center에서 FTP로 winscp로 업로드가능
+
+ftps://waws-prod-blu-133.ftp.azurewebsites.windows.net/site/wwwroot
+
+imsr\$imsr
+
+lP9R9mqxSogfa8CyBShib3JnwlcxYErbxiu2NihzWgTzaWgJj4rj9hWorCBG
+
+-----------------------------------
+deployment center에서 github도 가능 (버전 관리 쉬워짐)
+
+-----------------------------------------
+custom domain
+-------------------------------------
+app 생성시에 linux와 docker로 설정하면 
+
+----------------------------------------
+cdn
+cdnlink/folder name/file name
+
+-----------------------------------------
+active dic
+---------------------------------------$user="admin@fastz123outlook.onmicrosoft.com"
+• $pwd="P@ssw0rd1234" | ConvertTo-SecureString -AsPlainText -Force
+• $cred=New-Object -TypeName System.Management.Automation.PSCredential
+-Args $user, $pwd
+• Login-AzureRmAccount -Credential $cred | Out-Null
+
+---------------------------------
+1.컴터이름변경
+2.폴더공유
+3. ip설정
+192.168.100.200
+192.168.100.201
+
+192.168.100.200
+
+4. Firewall 기능끄기
+firewall.cpl

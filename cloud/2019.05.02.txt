@@ -1,0 +1,33 @@
+﻿winscp 사용
+FTP(File Transfer protocol)-> unsecure, FTPS(Secure) >다음으로 나온게 SFTP(Over SSH)
+SCP
+SFTP
+
+Web app 으로 VS로 sln파일 열고 프로파일 등록하여 site 만듬
+
+subnet
+
+.eastus.cloudapp.azure.com
+
+peering
+서브넷이 나눠진 네트워크간에 통신이 되게함
+
+VPN(Virtual private network)
+
+라우터
+경로수집+패킷연동
+패킷필터
+VPN
+NAT
+QoS
+DHCP
+
+--------------------
+VPN설정 및 연결
+
+-------------------
+Vnet
+
+New-SelfSignedCertificate -Type Custom -KeySpec Signature -Subject "CN=P2SRootCert" -KeyExportPolicy Exportable -HashAlgorithm sha256 -KeyLength 2048 -CertStoreLocation "Cert:\CurrentUser\My" -KeyUsageProperty Sign -KeyUsage CertSign
+
+New-SelfSignedCertificate -Type Custom -KeySpec Signature -Subject "CN=P2SChildCert" -KeyExportPolicy Exportable -HashAlgorithm sha256 -KeyLength 2048 -CertStoreLocation "Cert:\CurrentUser\My" -Signer (Get-ChildItem -Path "Cert:\CurrentUser\My\6B86D6A8D8C8F665E58F857540BBC887E3009460") -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2")
